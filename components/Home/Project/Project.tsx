@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 
+// Project data structure
 type ProjectType = {
   title: string;
   description: string;
@@ -13,6 +14,7 @@ type ProjectType = {
   github: string;
 };
 
+// Featured project collection
 const projects: ProjectType[] = [
   {
     title: "E-Commerce Platform",
@@ -52,6 +54,7 @@ const projects: ProjectType[] = [
   },
 ];
 
+// Technology badge color mapping
 const techColors: Record<string, string> = {
   React: "bg-blue-100 text-blue-700",
   "Next.js": "bg-black text-white",
@@ -66,31 +69,32 @@ const techColors: Record<string, string> = {
 
 const Project: React.FC = () => {
   return (
-    <section id="projects" className="bg-gray-50 py-16">
-      <div className="max-w-7xl mx-auto px-6  pb-6">
-        {/* Heading */}
-
+    <section id="projects" className="scroll-mt-12 bg-gray-50 py-16">
+      {/* Projects Section Container */}
+      <div className="w-[90%] lg:w-[97%] mx-auto">
+        {/* Section Heading */}
         <h2 className="text-center text-4xl md:text-5xl font-bold text-gray-900">
           Featured Projects
         </h2>
 
+        {/* Heading Divider */}
         <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500"></div>
 
+        {/* Section Description */}
         <p className="mx-auto mt-6 max-w-2xl text-center text-gray-600">
           A selection of projects demonstrating modern frontend development,
           performance optimization, and scalable application architecture.
         </p>
 
-        {/* Grid */}
-
+        {/* Project Cards Grid */}
         <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {projects.map((project, index) => (
+            // Individual Project Card
             <motion.div
               key={index}
               className="group overflow-hidden rounded-2xl bg-white shadow-md hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)] transition-all duration-300"
             >
-              {/* Image */}
-
+              {/* Project Image */}
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
@@ -99,19 +103,19 @@ const Project: React.FC = () => {
                 />
               </div>
 
-              {/* Content */}
-
+              {/* Project Information */}
               <div className="p-6">
+                {/* Project Title */}
                 <h3 className="text-xl font-bold text-gray-900">
                   {project.title}
                 </h3>
 
+                {/* Project Description */}
                 <p className="mt-3 text-sm leading-6 text-gray-600">
                   {project.description}
                 </p>
 
-                {/* Tech */}
-
+                {/* Technology Stack */}
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <span
@@ -125,9 +129,9 @@ const Project: React.FC = () => {
                   ))}
                 </div>
 
-                {/* Buttons */}
-
+                {/* Project Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 mt-5">
+                  {/* Live Demo Button */}
                   <motion.a
                     whileHover={{ scale: 1.02, y: -2 }}
                     whileTap={{ scale: 0.98 }}
@@ -142,6 +146,7 @@ const Project: React.FC = () => {
                     Live Demo
                   </motion.a>
 
+                  {/* GitHub Repository Button */}
                   <motion.a
                     whileHover={{ scale: 1.02, y: -2 }}
                     whileTap={{ scale: 0.98 }}

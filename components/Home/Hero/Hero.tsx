@@ -6,6 +6,7 @@ import Tilt from "react-parallax-tilt";
 import Image from "next/image";
 import Link from "next/link";
 
+// Parent animation configuration
 const container = {
   hidden: {},
   visible: {
@@ -15,16 +16,19 @@ const container = {
   },
 };
 
+// Child animation configuration
 const item = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
 };
 
+// Button interaction animation
 const buttonAnimation = {
   whileHover: { scale: 1.02 },
   whileTap: { scale: 0.97 },
 };
 
+// Hero highlight points
 const highlights = [
   {
     icon: "⚡",
@@ -42,27 +46,28 @@ const highlights = [
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative flex min-h-screen items-center pt-20 overflow-hidden bg-[#F8FAFC] px-5 pb-8 text-[#0F172A] sm:px-8 sm:pt-16 md:px-16 lg:px-20 lg:pb-8 ">
-      {/* LIGHT BACKGROUND */}
+    <section className="relative flex min-h-screen items-center pt-16 overflow-hidden bg-[#F8FAFC] px-5 pb-8 text-[#0F172A] sm:px-8 sm:pt-16 md:px-16 lg:px-20 md:pt-16 md:py-0 lg:pb-8">
+      {/* Hero Background Effects */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[#F8FAFC]" />
 
-        {/* Softer glow */}
+        {/* Decorative Gradient Glow */}
         <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-purple-200/20 blur-[100px]" />
       </div>
 
-      <div className="max-w-7xl mx-auto w-full relative z-10">
+      {/* Hero Main Container */}
+      <div className="relative w-[97%] lg:w-[100%] mx-auto z-10">
+        {/* Hero Two Column Layout */}
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-10 items-center">
-          {/* LEFT */}
+          {/* Hero Left Content */}
           <motion.div
             variants={container}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-
             className="max-w-5xl mx-auto lg:mx-0 text-center lg:text-left"
           >
-            {/* Badge */}
+            {/* Developer Badge */}
             <motion.div
               variants={item}
               className="mb-6 inline-flex items-center px-4 py-1.5 rounded-full border border-gray-200 bg-white md:text-sm text-slate-600 shadow-sm"
@@ -70,7 +75,7 @@ const Hero: React.FC = () => {
               Shiva Kumar Godha • Frontend Engineer
             </motion.div>
 
-            {/* Heading */}
+            {/* Hero Main Heading */}
             <motion.h1
               variants={item}
               className="max-w-3xl text-[38px] sm:text-[34px] md:text-[45px] lg:text-[42px] font-bold leading-[1.08] mb-6"
@@ -82,18 +87,17 @@ const Hero: React.FC = () => {
               web applications with React & Next.js.
             </motion.h1>
 
-            {/* Subtext  */}
+            {/* Hero Description */}
             <motion.p
               variants={item}
               className="max-w-lg text-base sm:text-[17px] leading-6 sm:leading-7 text-slate-600 mb-7 mx-auto lg:mx-0"
             >
-              I specialize in building production-ready applications with React,
-              Next.js, and TypeScript, focusing on performance, clean
-              architecture, and exceptional user experiences.
+              I specialize in building production-ready applications using
+              React, Next.js, and TypeScript, focusing on performance,
+              scalability, clean architecture, and exceptional user experiences.
             </motion.p>
 
-            {/* Proof Cards  */}
-
+            {/* Performance Highlight Cards */}
             <motion.div
               variants={item}
               className="flex flex-wrap gap-3 mb-8 sm:flex-nowrap sm:gap-3 justify-center lg:justify-start"
@@ -116,11 +120,12 @@ const Hero: React.FC = () => {
               ))}
             </motion.div>
 
-            {/* Buttons */}
+            {/* Hero Action Buttons */}
             <motion.div
               variants={item}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
+              {/* Project Button */}
               <Link
                 href="#projects"
                 className="inline-block rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
@@ -145,6 +150,7 @@ const Hero: React.FC = () => {
                 </motion.span>
               </Link>
 
+              {/* Contact Button */}
               <Link
                 href="#contact"
                 className="inline-block rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
@@ -159,8 +165,9 @@ const Hero: React.FC = () => {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT */}
+          {/* Hero Right Profile Section */}
           <div className="flex justify-center lg:justify-end">
+            {/* Floating Profile Animation */}
             <motion.div
               animate={{
                 rotate: [-0.5, 0.5, -0.5],
@@ -174,21 +181,23 @@ const Hero: React.FC = () => {
               }}
               style={{ willChange: "transform" }}
             >
+              {/* 3D Tilt Profile Card */}
               <Tilt
                 tiltMaxAngleX={6}
                 tiltMaxAngleY={6}
                 scale={1.02}
                 transitionSpeed={1200}
               >
+                {/* Profile Image Card */}
                 <motion.div
                   whileHover={{ scale: 1.02, rotateX: 2, rotateY: -2, y: -6 }}
                   transition={{ duration: 0.5 }}
-                  className="relative  w-[280px] overflow-hidden rounded-[2rem] border border-gray-200 bg-white shadow-[0_30px_80px_rgba(99,102,241,0.15)] md:w-[360px]"
+                  className="relative w-[280px] overflow-hidden rounded-[2rem] border border-gray-200 bg-white shadow-[0_30px_80px_rgba(99,102,241,0.15)] md:w-[360px]"
                 >
-                  {/* Softer glow */}
-
+                  {/* Profile Card Glow */}
                   <div className="absolute inset-0 bg-gradient-to-tr from-indigo-200 to-purple-200 opacity-30 blur-2xl" />
 
+                  {/* Profile Image */}
                   <Image
                     src="/assets/images/Shiva_Kumar_Godha.avif"
                     alt="Shiva Kumar Godha - Frontend Engineer"
@@ -201,9 +210,9 @@ const Hero: React.FC = () => {
                     className="relative h-full w-full object-cover"
                   />
 
-                  {/* Status */}
+                  {/* Availability Status */}
                   <div className="absolute bottom-3 left-3 flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1 text-xs shadow-sm">
-                    <span className="h-2.5 w-2.5 rounded-full bg-green-500 shadow-[0_0_8px_#22c55e]" />
+                    <span className="h-2.5 w-2.5 rounded-full animate-pulse bg-green-500 shadow-[0_0_8px_#22c55e]" />
                     Open to Work
                   </div>
                 </motion.div>

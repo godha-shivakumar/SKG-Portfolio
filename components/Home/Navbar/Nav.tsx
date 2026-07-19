@@ -12,19 +12,27 @@ type Props = {
 };
 
 const Nav = ({ openNav }: Props) => {
+  // Navigation background state based on scroll position
   const [navBg, setNavBg] = useState(false);
+
+  // Dark mode state management
   const [darkMode, setDarkMode] = useState(false);
 
+  // Update navbar style when scrolling
   useEffect(() => {
     const handleScroll = () => {
       setNavBg(window.scrollY >= 70);
     };
+
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Toggle application dark mode theme
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
+
     if (!darkMode) {
       document.documentElement.classList.add("dark");
     } else {
@@ -40,8 +48,9 @@ const Nav = ({ openNav }: Props) => {
           : "bg-white/90 backdrop-blur-sm"
       }`}
     >
+      {/* Navigation Container */}
       <div className="flex items-center h-full justify-between w-[95%] mx-auto">
-        {/* Logo */}
+        {/* Brand Logo */}
         <div className="flex items-center">
           <button
             onClick={() => {
@@ -62,25 +71,20 @@ const Nav = ({ openNav }: Props) => {
           </button>
         </div>
 
-        {/* NavLinks */}
+        {/* Desktop Navigation Links */}
         <div className="hidden lg:flex flex-1 justify-center items-center gap-11">
           {NavLinks.map((link) => (
             <Link
               key={link.id}
               href={link.url}
-              className="relative text-[#696969] font-semibold text-[16px]
-              hover:text-[#3B3B3B]
-              after:content-[''] after:absolute after:w-0 after:h-[2px] 
-              after:bg-blue-600 after:left-0 after:-bottom-1
-              after:transition-all hover:after:w-full"
+              className="relative text-[#696969] font-semibold text-[16px] caret-transparent select-none hover:text-[#3B3B3B] after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-blue-600 after:left-0 after:-bottom-1 after:transition-all hover:after:w-full"
             >
               {link.label}
             </Link>
           ))}
         </div>
 
-        {/* Right Side */}
-
+        {/* Navigation Actions */}
         <div className="flex items-center gap-4">
           {/* Dark Mode Toggle */}
           <div className="flex items-center">
@@ -94,22 +98,17 @@ const Nav = ({ openNav }: Props) => {
             />
           </div>
 
-          {/* Download CV */}
-
+          {/* Resume Download Button */}
           <a
             href="/assets/resume/Shiva_Kumar_Godha_Web_UI_Developer_Resume.pdf"
             download
-            className="hidden md:flex px-4 py-2 rounded-lg
-             bg-gradient-to-r from-blue-600 to-blue-800
-             hover:from-blue-700 hover:to-blue-900
-             text-white items-center gap-2 shadow-md"
+            className="hidden md:flex px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white items-center gap-2 shadow-md"
           >
             <BiDownload aria-hidden="true" />
             <span>Download CV</span>
           </a>
 
-          {/* Mobile Menu */}
-
+          {/* Mobile Navigation Trigger */}
           <HiBars3BottomRight
             onClick={() => openNav?.()}
             className="h-8 w-8 text-gray-700 dark:text-gray-200 cursor-pointer lg:hidden"

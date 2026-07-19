@@ -148,6 +148,8 @@ SKG-Portfolio/
 │   │   │   └── Skills.tsx
 │   │   ├── Projects/
 │   │   │   └── Projects.tsx
+│   │   ├── Contact/
+│   │   │   └── Contact.tsx
 │   │   └── Footer/
 │   │       └── Footer.tsx
 │   │

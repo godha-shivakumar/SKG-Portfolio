@@ -8,32 +8,34 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="relative bg-white overflow-hidden">
-      {/* Background Glow */}
+      {/* Footer Background Decorative Effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-amber-50/30 to-white" />
-
-      <div className="relative max-w-6xl px-2 mx-auto py-10 md:py-8  md:px-2  backdrop-blur-xl">
-        {/* Top */}
+      {/* Footer Main Container */}
+      <div className=" relative w-[90%] lg:w-[95%] mx-auto  px-2 py-10 md:py-8  md:px-2  backdrop-blur-xl">
+        {/* Footer Top Content */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-          {/* Brand */}
+          {/* Brand Information */}
           <div className="text-center md:text-left">
-            <Image
-              src="/assets/images/SKG_Logo.avif"
-              alt="SKG - Frontend Engineer"
-              width={70}
-              height={70}
-              className="object-contain"
-            />
-
-            <p className="text-sm text-neutral-500 mt-2">
+            {/* Brand Logo */}
+            <div className="flex justify-center md:justify-start">
+              <Image
+                src="/assets/images/SKG_Logo.avif"
+                alt="SKG - Frontend Engineer"
+                width={70}
+                height={70}
+                className="object-contain"
+              />
+            </div>
+            {/* Brand Description */}
+            <p className="text-sm text-neutral-500 mt-2 max-w-sm">
               Building modern web experiences with clean design and scalable
               code.
             </p>
           </div>
 
-          {/* Socials Icons*/}
-
+          {/* Social Media Links */}
           <div className="flex items-center gap-6">
-            {/* LinkedIn */}
+            {/* LinkedIn Profile */}
             <a
               href="https://in.linkedin.com/in/shivakumar-godha"
               target="_blank"
@@ -43,8 +45,18 @@ const Footer = () => {
               className="group transition-transform duration-300 hover:scale-105"
             >
               <div
-                className="p-3 rounded-xl bg-white shadow-sm border border-neutral-200 
-                 transition-all duration-300 group-hover:shadow-md group-hover:border-amber-200"
+                className="
+                          p-3
+                          rounded-xl
+                          bg-white
+                          shadow-sm
+                          border
+                          border-neutral-200
+                          transition-all
+                          duration-300
+                          group-hover:shadow-md
+                          group-hover:border-amber-200
+                          "
               >
                 <FaLinkedin
                   aria-hidden="true"
@@ -53,7 +65,7 @@ const Footer = () => {
               </div>
             </a>
 
-            {/* GitHub */}
+            {/* GitHub Profile */}
             <a
               href="https://github.com/godha-shivakumar"
               target="_blank"
@@ -63,8 +75,18 @@ const Footer = () => {
               className="group transition-transform duration-300 hover:scale-105"
             >
               <div
-                className="p-3 rounded-xl bg-white shadow-sm border border-neutral-200 
-                 transition-all duration-300 group-hover:shadow-md group-hover:border-amber-200"
+                className="
+                          p-3
+                          rounded-xl
+                          bg-white
+                          shadow-sm
+                          border
+                          border-neutral-200
+                          transition-all
+                          duration-300
+                          group-hover:shadow-md
+                          group-hover:border-amber-200
+                         "
               >
                 <SiGithub
                   aria-hidden="true"
@@ -73,7 +95,7 @@ const Footer = () => {
               </div>
             </a>
 
-            {/* Email */}
+            {/* Email Contact */}
             <a
               href="mailto:shivakumar.godha1@gmail.com"
               aria-label="Send email"
@@ -81,8 +103,18 @@ const Footer = () => {
               className="group transition-transform duration-300 hover:scale-105"
             >
               <div
-                className="p-3 rounded-xl bg-white shadow-sm border border-neutral-200 
-                 transition-all duration-300 group-hover:shadow-md group-hover:border-amber-200"
+                className="
+                          p-3
+                          rounded-xl
+                          bg-white
+                          shadow-sm
+                          border
+                          border-neutral-200
+                          transition-all
+                          duration-300
+                          group-hover:shadow-md
+                          group-hover:border-amber-200
+                          "
               >
                 <FiMail
                   aria-hidden="true"
@@ -93,13 +125,17 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Divider */}
-
+        {/* Footer Divider */}
         <div className="my-12 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent" />
+        {/* Footer Bottom Information */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-500">
-          <p>© {new Date().getFullYear()} SKG. All rights reserved.</p>
+          {/* Copyright */}
           <p className="opacity-70">
-            Built with ❤️ using Next.js, TypeScript & Tailwind CSS
+            © {new Date().getFullYear()} SKG. All rights reserved.
+          </p>
+          {/* Technology Stack */}
+          <p className="opacity-70">
+            Built with Next.js • TypeScript • Tailwind CSS
           </p>
         </div>
       </div>
