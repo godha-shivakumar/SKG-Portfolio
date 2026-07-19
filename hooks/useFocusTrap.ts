@@ -17,7 +17,6 @@ export const useFocusTrap = (
     const last = focusable[focusable.length - 1];
 
     first?.focus();
-
     const handleKey = (e: KeyboardEvent) => {
       if (e.key !== "Tab") return;
 

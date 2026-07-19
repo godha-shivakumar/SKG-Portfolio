@@ -26,7 +26,6 @@ export const useScrollSpy = (links: { url: string }[]) => {
       );
 
       sections.forEach((s) => observer.observe(s));
-
       return () => observer.disconnect();
     });
 
