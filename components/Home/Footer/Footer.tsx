@@ -19,7 +19,7 @@ const Footer = () => {
             {/* Brand Logo */}
             <div className="flex justify-center md:justify-start">
               <Image
-                src="/assets/images/SKG_Logo.avif"
+                src="/assets/images/SKG_Logo.png"
                 alt="SKG - Frontend Engineer"
                 width={70}
                 height={70}

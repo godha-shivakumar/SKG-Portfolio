@@ -89,7 +89,7 @@ const Nav = ({ openNav }: Props) => {
           {/* Dark Mode Toggle */}
           <div className="flex items-center">
             <Image
-              src="/images/lightmode_toggle.png"
+              src="/assets/images/lightmode_toggle.png"
               alt="Toggle dark mode"
               width={80}
               height={50}
