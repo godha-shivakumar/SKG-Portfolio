@@ -1,27 +1,59 @@
 {
   "compilerOptions": {
+    // JavaScript version target for generated type checking.
     "target": "ES2017",
+
+    // Available environment APIs and modern JavaScript features.
     "lib": ["dom", "dom.iterable", "esnext"],
+
+    // Allows JavaScript files alongside TypeScript files.
     "allowJs": true,
+
+    // Skips dependency type checking for faster builds.
     "skipLibCheck": true,
+
+    // Enables strict TypeScript type safety checks.
     "strict": true,
+
+    // Next.js handles output generation.
     "noEmit": true,
+
+    // Enables compatibility with CommonJS and ES modules.
     "esModuleInterop": true,
+
+    // Uses modern ES module syntax.
     "module": "esnext",
+
+    // Optimized module resolution for modern bundlers.
     "moduleResolution": "bundler",
+
+    // Allows importing JSON files as modules.
     "resolveJsonModule": true,
+
+    // Ensures compatibility with isolated module transformations.
     "isolatedModules": true,
+
+    // Uses the modern React JSX transform.
     "jsx": "react-jsx",
+
+    // Enables incremental TypeScript compilation for faster rebuilds.
     "incremental": true,
+
+    // Next.js TypeScript integration.
     "plugins": [
       {
         "name": "next"
       }
     ],
+
+    // Absolute import alias configuration.
+    // Allows imports using "@/..." instead of relative paths.
     "paths": {
       "@/*": ["./*"]
     }
   },
+
+  // Files included during TypeScript checking.
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -30,5 +62,7 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
+
+  // Dependencies excluded from TypeScript processing.
   "exclude": ["node_modules"]
 }
