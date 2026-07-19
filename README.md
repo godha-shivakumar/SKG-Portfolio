@@ -24,7 +24,7 @@ Designed with a strong focus on **performance, accessibility, responsive design,
 
 ### SKG Portfolio Website
 
-🔗 **https://YOUR-VERCEL-LINK.vercel.app**
+🔗 **https://skg-portfolio.vercel.app/**
 
 ---
 
