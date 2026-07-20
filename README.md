@@ -1,10 +1,14 @@
 # SKG Portfolio
 
+<p align="center">
+  <img src="public/assets/screenshots/homepage.avif" width="900" />
+</p>
+
 A modern, production-ready developer portfolio built with **Next.js 15**, **React 19**, **TypeScript**, and **Tailwind CSS**.
 
 Designed with a strong focus on **performance, accessibility, responsive design, clean architecture, and modern UI/UX**, this portfolio showcases my professional experience, technical skills, and featured frontend projects.
 
-> Built to deliver an exceptional user experience while maintaining outstanding Lighthouse performance and scalable code architecture.
+> Built to deliver a fast, accessible user experience with optimized performance and scalable frontend architecture.
 
 ---
 
@@ -28,7 +32,7 @@ Designed with a strong focus on **performance, accessibility, responsive design,
 
 ---
 
-# Key Features
+## Key Features
 
 ### User Experience
 
@@ -43,7 +47,7 @@ Designed with a strong focus on **performance, accessibility, responsive design,
 
 - Optimized image loading
 - Lazy loading
-- Lighthouse Score: **100**
+- Lighthouse Performance Score: **100/100**
 - SEO optimized
 - Core Web Vitals optimized
 - Fast page rendering
@@ -67,7 +71,7 @@ Designed with a strong focus on **performance, accessibility, responsive design,
 
 ---
 
-# Lighthouse Report
+## Lighthouse Report
 
 Perfect Lighthouse scores across all major categories.
 
@@ -93,7 +97,7 @@ Perfect Lighthouse scores across all major categories.
 
 ---
 
-# Screenshots
+## Screenshots
 
 ## Homepage
 
@@ -107,7 +111,7 @@ Perfect Lighthouse scores across all major categories.
 
 ---
 
-# Featured Projects
+## Featured Projects
 
 ## Luxury Travel App
 
@@ -127,7 +131,7 @@ A modern ecommerce interface emphasizing responsive design, intuitive navigation
 
 ---
 
-# Project Structure
+## Project Structure
 
 ```text
 SKG-Portfolio/
@@ -194,7 +198,7 @@ SKG-Portfolio/
 
 ---
 
-# Getting Started
+## Getting Started
 
 ## Clone Repository
 
@@ -223,12 +227,14 @@ npm run dev
 Visit
 
 ```
+## Open in Browser
+
 Open the local development URL displayed in your terminal (typically `http://localhost:3000`).
 ```
 
 ---
 
-# Production Build
+## Production Build
 
 Build the application
 
@@ -244,13 +250,13 @@ npm start
 
 ---
 
-# Deployment
+## Deployment
 
 This project is deployed on **Vercel**.
 
 ---
 
-# Technologies Used
+## Technologies Used
 
 ## Frontend
 
@@ -290,7 +296,7 @@ This portfolio demonstrates modern frontend engineering practices, including:
 
 ---
 
-# Future Improvements
+## Future Improvements
 
 - Blog integration
 - CMS support
@@ -302,7 +308,7 @@ This portfolio demonstrates modern frontend engineering practices, including:
 
 ---
 
-# Contributing
+## Contributing
 
 Contributions, ideas, and suggestions are welcome.
 
@@ -310,7 +316,7 @@ If you discover any issues or have improvements, feel free to open an issue or s
 
 ---
 
-# Author
+## Author
 
 ## Shiva Kumar Godha
 
@@ -323,7 +329,7 @@ Frontend Engineer passionate about building scalable, high-performance, and acce
 
 ---
 
-# License
+## License
 
 This project is licensed under the **MIT License**.
 
