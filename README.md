@@ -1,6 +1,6 @@
 # SKG Portfolio
 
-A modern, production-ready developer portfolio built with **Next.js 15**, **React 19**, **TypeScript**, and **Tailwind CSS**.
+A modern, production-ready developer portfolio built with **Next.js 15**, **React 19**, **TypeScript**, and **Tailwind CSS**, focused on performance, accessibility, responsive design, and scalable frontend architecture.
 
 Designed with a strong focus on **performance, accessibility, responsive design, clean architecture, and modern UI/UX**, this portfolio showcases my professional experience, technical skills, and featured frontend projects.
 
