@@ -71,12 +71,13 @@ Designed with a strong focus on **performance, accessibility, responsive design,
 
 Perfect Lighthouse scores across all major categories.
 
-| Category          | Score   |
-| ----------------- | ------- |
-| 🚀 Performance    | **100** |
-| ♿ Accessibility  | **100** |
-| ✅ Best Practices | **100** |
-| 🔍 SEO            | **100** |
+| Category            | Score   |
+| ------------------- | ------- |
+| 🚀 Performance      | **100** |
+| ♿ Accessibility    | **100** |
+| ✅ Best Practices   | **100** |
+| 🔍 SEO              | **100** |
+| 🤖 Agentic Browsing | **2/2** |
 
 ---
 
@@ -85,9 +86,9 @@ Perfect Lighthouse scores across all major categories.
 | Metric                   | Result    |
 | ------------------------ | --------- |
 | First Contentful Paint   | **0.3 s** |
-| Largest Contentful Paint | **0.8 s** |
+| Largest Contentful Paint | **0.7 s** |
 | Total Blocking Time      | **10 ms** |
-| Cumulative Layout Shift  | **0.001** |
+| Cumulative Layout Shift  | **0**     |
 | Speed Index              | **0.5 s** |
 
 ---
