@@ -102,7 +102,7 @@ Perfect Lighthouse scores across all major categories.
 
 ## Lighthouse Report
 
-![Lighthouse](public/assets/screenshots/lighthouse-report.avif)
+![Lighthouse](public/assets/screenshots/lighthouse_report.avif)
 
 ---
 
