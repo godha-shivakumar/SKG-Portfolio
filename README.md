@@ -246,9 +246,7 @@ npm start
 
 # Deployment
 
-This application is deployed using **Vercel**.
-
-Deploy your own copy in minutes using the Vercel platform.
+This project is deployed on **Vercel**.
 
 ---
 
