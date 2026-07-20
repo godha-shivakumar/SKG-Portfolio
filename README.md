@@ -24,7 +24,7 @@ Designed with a strong focus on **performance, accessibility, responsive design,
 
 ### SKG Portfolio Website
 
-🔗 **https://skg-portfolio.vercel.app/**
+🔗 **Live Site:** https://skg-portfolio.vercel.app/
 
 ---
 
@@ -189,7 +189,7 @@ SKG-Portfolio/
 ├── package.json
 ├── postcss.config.mjs
 ├── tailwind.config.ts
-└── tsconfig.jsonq
+└── tsconfig.json
 ```
 
 ---
@@ -199,13 +199,13 @@ SKG-Portfolio/
 ## Clone Repository
 
 ```bash
-git clone https://github.com/godha-shivakumar/YOUR_REPOSITORY.git
+git clone https://github.com/godha-shivakumar/SKG-Portfolio.git
 ```
 
 ## Navigate to Project
 
 ```bash
-cd YOUR_REPOSITORY
+cd SKG-Portfolio
 ```
 
 ## Install Dependencies
@@ -223,7 +223,7 @@ npm run dev
 Visit
 
 ```
-http://localhost:3000
+Open the local development URL displayed in your terminal (typically `http://localhost:3000`).
 ```
 
 ---
