@@ -1,9 +1,5 @@
 # SKG Portfolio
 
-<p align="center">
-  <img src="public/assets/screenshots/homepage.avif" width="900" />
-</p>
-
 A modern, production-ready developer portfolio built with **Next.js 15**, **React 19**, **TypeScript**, and **Tailwind CSS**.
 
 Designed with a strong focus on **performance, accessibility, responsive design, clean architecture, and modern UI/UX**, this portfolio showcases my professional experience, technical skills, and featured frontend projects.
@@ -223,8 +219,6 @@ npm install
 ```bash
 npm run dev
 ```
-
-Visit
 
 ```
 ## Open in Browser
