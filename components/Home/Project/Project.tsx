@@ -48,7 +48,7 @@ const projects: ProjectType[] = [
     description:
       "A modern developer portfolio built with responsive design and smooth animations.",
     image: "/assets/images/Creative_portfolio.avif",
-    tech: ["Next.js", "React", "TTailwind"],
+    tech: ["Next.js", "React", "Tailwind"],
     live: "https://skg-portfolio.vercel.app/",
     github: "https://github.com/godha-shivakumar/SKG-Portfolio",
   },
