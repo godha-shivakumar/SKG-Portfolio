@@ -96,7 +96,7 @@ Perfect Lighthouse scores across all major categories.
 
 ## Homepage
 
-![Homepage](public/assets/screenshots/home.avif)
+![Homepage](public/assets/screenshots/homepage.avif)
 
 ---
 
