@@ -95,7 +95,7 @@ Perfect Lighthouse scores across all major categories.
 
 ## Screenshots
 
-## Homepage
+### Homepage
 
 ![Homepage](public/assets/screenshots/homepage.avif)
 
@@ -109,7 +109,7 @@ Perfect Lighthouse scores across all major categories.
 
 ## Featured Projects
 
-## Luxury Travel App
+### Luxury Travel App
 
 A premium travel booking interface designed with modern layouts, responsive components, and engaging user interactions.
 
@@ -177,8 +177,8 @@ SKG-Portfolio/
 │       │   └── SKG_Logo.png
 │       │
 │       ├── screenshots/
-│       │   ├── home.avif
-│       │   └── lighthouse-report.avif
+│       │   ├── homepage.avif
+│       │   └── lighthouse_report.avif
 │       │
 │       └── resume/
 │           └── Shiva_Kumar_Godha_Web_UI_Developer_Resume.pdf
@@ -252,18 +252,18 @@ This project is deployed on **Vercel**.
 
 ## Technologies Used
 
-## Frontend
+### Frontend
 
 - Next.js
 - React
 - TypeScript
 - Tailwind CSS
 
-## Animation
+### Animation
 
 - Framer Motion
 
-## Icons
+### Icons
 
 - Lucide React
 
@@ -275,7 +275,7 @@ This project is deployed on **Vercel**.
 
 ---
 
-# Why This Project?
+## Why This Project?
 
 This portfolio demonstrates modern frontend engineering practices, including:
 
