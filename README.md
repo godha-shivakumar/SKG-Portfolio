@@ -73,9 +73,9 @@ Perfect Lighthouse scores across all major categories.
 
 | Category            | Score   |
 | ------------------- | ------- |
-| 🚀 Performance      | **100** |
+| ⚡Performance       | **100** |
 | ♿ Accessibility    | **100** |
-| ✅ Best Practices   | **100** |
+| 🛡️ Best Practices   | **100** |
 | 🔍 SEO              | **100** |
 | 🤖 Agentic Browsing | **2/2** |
 
