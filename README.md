@@ -20,7 +20,7 @@ Designed with a strong focus on **performance, accessibility, responsive design,
 
 ---
 
-# Live Demo
+## Live Demo
 
 ### SKG Portfolio Website
 
