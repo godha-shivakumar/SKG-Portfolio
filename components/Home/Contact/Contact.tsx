@@ -1,13 +1,21 @@
 "use client";
 
+import { useState } from "react";
 import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaArrowRight,
+  FaCheckCircle,
 } from "react-icons/fa";
 
 const Contact = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitted(true);
+  };
+
   return (
     <section
       id="contact"
@@ -153,8 +161,39 @@ const Contact = () => {
 
           {/* Contact Form Section */}
           <div className="lg:col-span-7">
-            <form
-              className="
+            {isSubmitted ? (
+              <div
+                className="
+                          rounded-[32px]
+                          border
+                          border-green-200
+                          bg-white
+                          p-8
+                          text-center
+                          shadow-2xl
+                          shadow-green-100
+                          lg:p-12
+                        "
+              >
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
+                  <FaCheckCircle className="text-3xl text-green-600" />
+                </div>
+
+                <h3 className="mt-6 text-3xl font-bold text-slate-900">
+                  Message Sent Successfully!
+                </h3>
+
+                <p className="mt-3 text-slate-500">
+                  Thank you for contacting me. I'll get back to you within{" "}
+                  <span className="font-semibold text-slate-700">
+                    24 hours.
+                  </span>
+                </p>
+              </div>
+            ) : (
+              <form
+                onSubmit={handleSubmit}
+                className="
                         rounded-[32px]
                         border
                         border-slate-200
@@ -164,21 +203,21 @@ const Contact = () => {
                         shadow-slate-200/50
                         lg:p-12
                        "
-            >
-              {/* Form Header */}
-              <h3 className="text-3xl font-bold text-slate-900 leading-tight">
-                Start a Conversation
-              </h3>
+              >
+                {/* Form Header */}
+                <h3 className="text-3xl font-bold text-slate-900 leading-tight">
+                  Start a Conversation
+                </h3>
 
-              <p className="mt-3 text-slate-500">
-                Tell me about your project, and I'll get back to you within 24
-                hours.
-              </p>
-              {/* Form Fields */}
-              <div className="mt-8 space-y-5">
-                <input
-                  placeholder="Full Name"
-                  className="
+                <p className="mt-3 text-slate-500">
+                  Tell me about your project, and I'll get back to you within 24
+                  hours.
+                </p>
+                {/* Form Fields */}
+                <div className="mt-8 space-y-5">
+                  <input
+                    placeholder="Full Name"
+                    className="
                             w-full
                             rounded-xl
                             border
@@ -194,12 +233,12 @@ const Contact = () => {
                             focus:ring-indigo-100
                             focus:ring-1
                             "
-                />
-                {/* Email Input */}
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="
+                  />
+                  {/* Email Input */}
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    className="
                             w-full
                             rounded-xl
                             border
@@ -215,11 +254,11 @@ const Contact = () => {
                             focus:ring-indigo-100
                             focus:ring-1
                            "
-                />
-                {/* Subject Input */}
-                <input
-                  placeholder="Subject"
-                  className="
+                  />
+                  {/* Subject Input */}
+                  <input
+                    placeholder="Subject"
+                    className="
                             w-full
                             rounded-xl
                             border
@@ -235,12 +274,12 @@ const Contact = () => {
                             focus:ring-indigo-100
                             focus:ring-1
                             "
-                />
-                {/* Message Text Area */}
-                <textarea
-                  rows={5}
-                  placeholder="Tell me about your project..."
-                  className="
+                  />
+                  {/* Message Text Area */}
+                  <textarea
+                    rows={5}
+                    placeholder="Tell me about your project..."
+                    className="
                             w-full
                             rounded-xl
                             border
@@ -257,10 +296,11 @@ const Contact = () => {
                             focus:ring-indigo-100
                             resize-none
                            "
-                />
-                {/* Submit Button */}
-                <button
-                  className="
+                  />
+                  {/* Submit Button */}
+                  <button
+                    type="submit"
+                    className="
                             group
                             flex
                             w-full
@@ -279,12 +319,13 @@ const Contact = () => {
                             transition
                             hover:-translate-y-1
                             "
-                >
-                  Send Your Message
-                  <FaArrowRight className="transition group-hover:translate-x-2" />
-                </button>
-              </div>
-            </form>
+                  >
+                    Send Your Message
+                    <FaArrowRight className="transition group-hover:translate-x-2" />
+                  </button>
+                </div>
+              </form>
+            )}
           </div>
         </div>
       </div>
