@@ -19,7 +19,7 @@ const Contact = () => {
       <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-purple-200/20 blur-3xl" />
 
       {/* Main Contact Container */}
-      <div className="relative mx-auto w-[90%] max-w-7xl">
+      <div className="relative mx-auto w-[95%] sm:w-[97%] max-w-7xl">
         {/* Contact Section Heading */}
         <div className="mb-16 text-center">
           <h2 className="text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
@@ -29,7 +29,7 @@ const Contact = () => {
           {/* Heading Accent Line */}
           <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600" />
 
-          <p className="mx-auto mt-6 max-w-2xl text-center text-gray-600">
+          <p className="mx-auto mt-5 max-w-2xl px-5 sm:px-2 text-center text-gray-600">
             Have a project, opportunity, or collaboration in mind? I'd love to
             hear from you.
           </p>
@@ -70,7 +70,8 @@ const Contact = () => {
                           border
                           border-slate-200
                           bg-white
-                          p-5
+                          p-3 
+                          sm:p-3
                           shadow-sm
                           transition
                           hover:-translate-y-0.5

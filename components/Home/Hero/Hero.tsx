@@ -47,7 +47,7 @@ const highlights = [
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative flex min-h-screen items-center pt-16 overflow-hidden bg-[#F8FAFC] px-5 pb-8 text-[#0F172A] sm:px-8 sm:pt-16 md:px-16 lg:px-20 md:pt-16 md:py-0 lg:pb-8">
+    <section className="relative flex min-h-screen items-center pt-20 overflow-hidden bg-[#F8FAFC] px-5 pb-8 text-[#0F172A] sm:px-8 sm:pt-16 md:px-16 lg:px-20 md:pt-16 md:py-0 lg:pb-8">
       {/* Hero Background Effects */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[#F8FAFC]" />
