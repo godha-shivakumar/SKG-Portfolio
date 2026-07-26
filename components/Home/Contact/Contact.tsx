@@ -338,6 +338,7 @@ const Contact = () => {
                   )}
                   {/* Subject Input */}
                   <input
+                    name="subject"
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="Subject"
