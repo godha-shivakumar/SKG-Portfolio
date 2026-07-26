@@ -61,13 +61,13 @@ const Contact = () => {
     if (!formData.subject.trim()) {
       newErrors.subject = "Please enter a subject.";
     } else if (formData.subject.trim().length < 5) {
-      newErrors.subject = "Subject must be at least 5 characters.";
+      newErrors.subject = "Please enter a valid subject.";
     }
 
     if (!formData.message.trim()) {
       newErrors.message = "Please tell me about your project.";
     } else if (formData.message.trim().length < 20) {
-      newErrors.message = "Project details must be at least 20 characters.";
+      newErrors.message = "Please provide more details about your project.";
     }
 
     setErrors(newErrors);
