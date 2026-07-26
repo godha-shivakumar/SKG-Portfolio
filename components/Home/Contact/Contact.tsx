@@ -11,8 +11,77 @@ import {
 
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const [submitError, setSubmitError] = useState("");
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const newErrors = {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    };
+    if (!formData.name.trim()) {
+      newErrors.name = "Please enter your full name.";
+    } else if (formData.name.trim().length < 4) {
+      newErrors.name = "Please provide your complete name.";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Please enter your email address.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address.";
+    }
+
+    if (!formData.subject.trim()) {
+      newErrors.subject = "Please enter a subject.";
+    } else if (formData.subject.trim().length < 5) {
+      newErrors.subject = "Subject must be at least 5 characters.";
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Please tell me about your project.";
+    } else if (formData.message.trim().length < 20) {
+      newErrors.message = "Project details must be at least 20 characters.";
+    }
+
+    setErrors(newErrors);
+
+    if (
+      newErrors.name ||
+      newErrors.email ||
+      newErrors.subject ||
+      newErrors.message
+    ) {
+      setSubmitError("Please fill in all required fields correctly.");
+      return;
+    }
+    setSubmitError("");
     setIsSubmitted(true);
   };
 
@@ -216,6 +285,9 @@ const Contact = () => {
                 {/* Form Fields */}
                 <div className="mt-8 space-y-5">
                   <input
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="Full Name"
                     className="
                             w-full
@@ -234,9 +306,15 @@ const Contact = () => {
                             focus:ring-1
                             "
                   />
+                  {errors.name && (
+                    <p className="text-sm text-red-500">{errors.name}</p>
+                  )}
                   {/* Email Input */}
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="Email Address"
                     className="
                             w-full
@@ -255,8 +333,13 @@ const Contact = () => {
                             focus:ring-1
                            "
                   />
+                  {errors.email && (
+                    <p className="text-sm text-red-500">{errors.email}</p>
+                  )}
                   {/* Subject Input */}
                   <input
+                    value={formData.subject}
+                    onChange={handleChange}
                     placeholder="Subject"
                     className="
                             w-full
@@ -275,9 +358,15 @@ const Contact = () => {
                             focus:ring-1
                             "
                   />
+                  {errors.subject && (
+                    <p className="text-sm text-red-500">{errors.subject}</p>
+                  )}
                   {/* Message Text Area */}
                   <textarea
                     rows={5}
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="Tell me about your project..."
                     className="
                             w-full
@@ -297,6 +386,9 @@ const Contact = () => {
                             resize-none
                            "
                   />
+                  {errors.message && (
+                    <p className="text-sm text-red-500">{errors.message}</p>
+                  )}
                   {/* Submit Button */}
                   <button
                     type="submit"
@@ -323,6 +415,11 @@ const Contact = () => {
                     Send Your Message
                     <FaArrowRight className="transition group-hover:translate-x-2" />
                   </button>
+                  {submitError && (
+                    <p className="mt-4 text-center text-sm font-medium text-red-500">
+                      {submitError}
+                    </p>
+                  )}
                 </div>
               </form>
             )}
