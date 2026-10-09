@@ -179,7 +179,7 @@ SKG-Portfolio/
 │       │   └── lighthouse_report.avif
 │       │
 │       └── resume/
-│           └── Shiva_Kumar_Godha_Web_UI_Developer_Resume.pdf
+│           └── Shiva_Kumar_Godha_Resume.pdf
 │
 ├── .gitignore
 ├── LICENSE
